@@ -17,7 +17,7 @@ public class commonOptions extends base{
         else
             throw new RuntimeException(("Invalid platform browser name"));
         driver.manage().window();
-        driver.get("https://www.google.com/");
+        driver.get("https://www.amazon.com/");
 
     }
 
