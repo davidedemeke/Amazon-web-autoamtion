@@ -1,17 +1,16 @@
 package SanityTests;
 
-import Utilities.commonOptions;
+import Utilities.commonOperations;
 import WorkFlows.webFlows;
 import org.testng.annotations.Test;
 
 
-public class AmazonWeb extends commonOptions {
-    @Test
+public class AmazonWeb extends commonOperations {
+
+    @Test(description ="Login to my account ")
     public void test_01_login()  {
-        webFlows.login("", "davidemeke@gmail.com",
-                "Td7519505","dsds","sdsds");
-//        webFlows.login("davidemeke@gmail.com","Td7519505");
+        webFlows.login("davidemeke@gmail.com", "Td7519505");
     }
 
-
 }
+

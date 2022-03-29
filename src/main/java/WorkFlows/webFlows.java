@@ -1,22 +1,24 @@
 package WorkFlows;
 
 import Extensions.UiActions;
-import Utilities.commonOptions;
+import Utilities.commonOperations;
 
-public class webFlows extends commonOptions {
+public class webFlows extends commonOperations {
 
-    public static void login(String goToLoginPageBtn, String user , String pass ,String continue_to_Password_Btn, String txt_password) {
-        UiActions.updateText(amazonLogin.go_To_Login_Page_Btn, goToLoginPageBtn);
+    public static void login( String user , String pass) {
+        UiActions.click(amazonLogin.go_To_Login_Page_Btn );
         UiActions.updateText(amazonLogin.txt_userName, user);
-        UiActions.updateText(amazonLogin.continue_to_Password_Btn, continue_to_Password_Btn);
+        UiActions.click(amazonLogin.continue_to_Password_Btn);
+        UiActions.updateText(amazonLogin.txt_password, pass);
+        UiActions.click(amazonLogin.login_To_Account_btn);
+
+//        amazonLogin.go_To_Login_Page_Btn, goToLoginPageBtn);
 
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
 //        }
-
-        UiActions.updateText(amazonLogin.txt_password, txt_password);
 //        try {
 //            Thread.sleep(500);
 //        } catch (InterruptedException e) {
