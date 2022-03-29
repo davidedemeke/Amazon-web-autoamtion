@@ -5,7 +5,7 @@ import WorkFlows.webFlows;
 import org.testng.annotations.Test;
 
 
-public class AmazonWeb extends commonOperations {
+public class Tests extends commonOperations {
 
     @Test(description ="Login to my account ")
     public void test_01_login()  {
