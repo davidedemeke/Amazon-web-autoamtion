@@ -5,8 +5,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+
+import java.util.concurrent.TimeUnit;
 
 public class commonOperations extends base{
 
@@ -25,6 +29,9 @@ public class commonOperations extends base{
            throw new RuntimeException(("Invalid platform browser name"));
        driver.manage().window();  //    driver.manage().window().maximize();
        driver.get("https://www.amazon.com/ref=nav_logo");
+       driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+       wait = new WebDriverWait(driver , 5 );
+       actions = new Actions(driver);
    }
 
    public static WebDriver initChromeDriver(){
