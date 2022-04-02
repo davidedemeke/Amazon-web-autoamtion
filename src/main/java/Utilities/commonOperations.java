@@ -8,12 +8,41 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.File;
 import java.util.concurrent.TimeUnit;
-
+//import java.w3c.dom.Document;
 public class commonOperations extends base{
 
+
+    // Read data from XML method
+//
+//    public static String getData (String nodeName){
+//        File fxmlFile;
+//        DocumentBuilderFactory dbFactory;
+//        DocumentBuilder dBuilder;
+//        DocumentBuilder doc = null;
+//
+//        try {
+//            fxmlFile = new File("./configuration/DataConfig.xml");
+//            dbFactory = DocumentBuilderFactory.newInstance();
+//            dBuilder = dbFactory.newDocumentBuilder();
+//            doc = (DocumentBuilder) dBuilder.parse(fxmlFile);
+//            doc.getDocumentElement().normalize();
+//        }
+//        catch (Exception e)
+//        {
+//            System.out.println("ERROR READING XML FILE" + e);
+//        }
+//
+//        {
+//            return doc.getElementByTagName(nodeName).item(0).getTextContent();
+//        }
+//    }
 
 
    public void initBrowser(String browserType){
@@ -63,9 +92,12 @@ public class commonOperations extends base{
        managePages.init();
    }
 
-
- @AfterClass
-   public void closeSession(){
+    @AfterMethod
+    public void afterMethod(){
+       driver.get("https://www.amazon.com/ref=nav_logo");
+        }
+    @AfterClass
+    public void closeSession(){
         //driver.quit();
     }
 

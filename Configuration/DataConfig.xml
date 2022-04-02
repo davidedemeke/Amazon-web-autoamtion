@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Envairoment >
+    <!-- Timeout -->
+    <Timeoutnit> 5</Timeoutnit>
+    <!-- web -->
+    <Platformname>web </Platformname>
+    <Browsername>Chrome</Browsername>
+    <url>"https://www.amazon.com/ref=nav_logo" </url>
+
+</Envairoment >
