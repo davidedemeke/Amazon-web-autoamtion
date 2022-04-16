@@ -30,6 +30,11 @@ public class Tests extends commonOperations {
         UiActions.mouseOver(TopMenuPage.my_account_btn, myAccountMenu.my_orders_btn);
 //        Verification.numberOfElement(MyOrdersPage.my_order_list,10 );  How manny list exist on the page
     }
+    @Test(description = "go to mmy account page")  // TODO: 16/04/2022  
+    @Description( "Test Description : go to mmy account page")
+    public void test_03(){
+        webFlows.my_account_page();
+    }
 
 }
 

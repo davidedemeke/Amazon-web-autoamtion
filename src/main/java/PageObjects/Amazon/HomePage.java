@@ -8,8 +8,8 @@ public class HomePage {
     @FindBy(how = How.XPATH, using = "//span[@class='navFooterBackToTopText']")
     public WebElement txt_Amazon_logo;
 
-//    @FindBy(how = How.ID, using = "nav-link-accountList-nav-line-1")
-//    public WebElement element_number_2;
+    @FindBy(how = How.ID, using = "//a[@id='nav-link-accountList']")
+    public WebElement my_account_btn;
 //
 //    @FindBy(how = How.ID, using = "nav-link-accountList-nav-line-1")
 //    public WebElement element_number_3;

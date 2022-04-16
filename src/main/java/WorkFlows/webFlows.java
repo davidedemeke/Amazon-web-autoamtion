@@ -15,6 +15,12 @@ public class webFlows extends commonOperations {
         UiActions.click(amazonLogin.login_To_Account_btn);
     }
 
+
+
+    public static void my_account_page() {
+        UiActions.click(homePage.my_account_btn);
+    }
+
 //        @Step ("Create a new user")
 //    @description ("Workflow to click on button and update text tnd click to create user")
 //    public static void createUser(String name, String email, String user, String Password) {
