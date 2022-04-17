@@ -1,18 +1,20 @@
 package WorkFlows;
 
 import Extensions.UiActions;
+import Extensions.Verification;
 import Utilities.commonOperations;
+import io.qameta.allure.Description;
 import io.qameta.allure.Step;
-import org.testng.annotations.AfterClass;
 
 public class webFlows extends commonOperations {
     @Step("Login Amazon  flow")
-    public static void login(String user, String pass) {
-        UiActions.click(amazonLogin.go_To_Login_Page_Btn);
-        UiActions.updateText(amazonLogin.txt_userName, user);
-        UiActions.click(amazonLogin.continue_to_Password_Btn);
-        UiActions.updateText(amazonLogin.txt_password, pass);
-        UiActions.click(amazonLogin.login_To_Account_btn);
+    @Description ("description :login to my amazon account")
+    public static void login() {
+        UiActions.click(loginPage.go_To_Login_Page_Btn);
+        UiActions.updateText(loginPage.txt_userName, "davidemeke@gmail.com");
+        UiActions.click(loginPage.continue_to_Password_Btn);
+        UiActions.updateText(loginPage.txt_password, "Td7519505");
+        UiActions.click(loginPage.login_To_Account_btn);
     }
 
 
@@ -21,6 +23,21 @@ public class webFlows extends commonOperations {
         UiActions.click(homePage.my_account_btn);
     }
 
+
+
+    public static void textsInUsernamePage(){
+        UiActions.click(loginPage.go_To_Login_Page_Btn);
+        Verification.textInElement(loginPage.InputUsernamePageTitleText,"כניסה" );
+        Verification.textInElement(loginPage.InputUsernamePageSubTitleText,"דוא\"ל או מספר טלפון נייד" );
+        Verification.textInElement(loginPage.InputUsernamePageContinueBtnText,"המשך" );
+        Verification.textInElement(loginPage.BelowContinueBtnText, "אם תמשיך, אתה מסכים בכך לתנאי השימוש ולהודעת הפרטיות של Amazon.");
+        Verification.textInElement(loginPage.NeedHelpBtnText,"זקוק לעזרה?");
+        Verification.textInElement(loginPage.NeWInAmazonBtnText,"הנך חדש ב Amazon?");
+        Verification.textInElement(loginPage.createAccountBtnText,"צור את חשבון Amazon שלך" );
+
+
+}
+}
 //        @Step ("Create a new user")
 //    @description ("Workflow to click on button and update text tnd click to create user")
 //    public static void createUser(String name, String email, String user, String Password) {
@@ -38,7 +55,7 @@ public class webFlows extends commonOperations {
 //    UiActions.click(); navigate to create user page
 
 
-}
+
 
 
 

@@ -19,7 +19,7 @@ public class Tests extends commonOperations {
     @Test(description ="Login to my account ")
     @Description("Test Description : Login to Amazon account")
     public void test_01()  {
-        webFlows.login("davidemeke@gmail.com", "Td7519505");
+        webFlows.login();
         Verification.textInElement(homePage.txt_Amazon_logo, "לראש הדף"); //compare test on page
     }
 
@@ -35,6 +35,9 @@ public class Tests extends commonOperations {
     public void test_03(){
         webFlows.my_account_page();
     }
-
+       @Test(description = "test for texts inside userName page ")
+        @Description( "Test Description : go to mmy account page") public void test_04(){
+        webFlows.textsInUsernamePage();
+    }
 }
 
