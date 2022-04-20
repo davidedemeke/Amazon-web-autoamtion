@@ -11,7 +11,7 @@ import static org.testng.Assert.assertEquals;
 
 public class Verification extends commonOperations {
     @Step("Verify text in element")
-    public static void textInElement(WebElement elem, String expectedValue) {
+    public static void CompareTextInElement(WebElement elem, String expectedValue) {
         assertEquals(elem.getText(), expectedValue);
     }
 

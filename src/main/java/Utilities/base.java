@@ -1,5 +1,6 @@
 package Utilities;
 
+import PageObjects.Amazon.Header;
 import PageObjects.Amazon.login;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -14,7 +15,7 @@ public class base {
 
     public static login loginPage;
     public static PageObjects.Amazon.HomePage homePage;
-    public static PageObjects.Amazon.TopMenuPage TopMenuPage;
+    public static Header header;
     public static PageObjects.Amazon.MyAccountMenu myAccountMenu;
     public static PageObjects.Amazon.MyOrdersPage MyOrdersPage;
 

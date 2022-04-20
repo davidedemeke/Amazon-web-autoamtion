@@ -51,6 +51,38 @@ public class login {
 
 
 
+    //Enter Password page
+    @Description("Texts inside Input username page  ")
+    @FindBy(how = How.XPATH, using = "//div[@class='a-box-inner a-padding-extra-large'] /h1")
+    public WebElement InputPswPageTitleText;
+
+
+    @FindBy(how = How.XPATH, using = "//span[text()='davidemeke@gmail.com']")
+    public WebElement InputPswPageUserMailAdd;
+
+
+    @FindBy(how = How.ID, using = "ap_change_login_claim")
+    public WebElement InputPswPageChangeMailBtnText; //
+
+    @FindBy(how = How.ID, using = "auth-fpp-link-bottom")
+    public WebElement InputPswPageForgotPswText;
+
+    @FindBy(how = How.XPATH, using = "//label[@class='a-form-label']")
+    public WebElement InputPswPageLoginTitleText;
+
+    @FindBy(how = How.ID, using = "signInSubmit")
+    public WebElement InputPswPageSubmitBtnText;
+
+    @FindBy(how = How.CLASS_NAME, using = "a-label a-checkbox-label")
+    public WebElement InputPswPageRememberMeText;
+
+
+    @FindBy(how = How.ID, using = "remember_me_learn_more_link")
+    public WebElement InputPswPageForDetailsBtnText;
+
+
+
+
 //
 //
 //

@@ -25,19 +25,10 @@ public class webFlows extends commonOperations {
 
 
 
-    public static void textsInUsernamePage(){
-        UiActions.click(loginPage.go_To_Login_Page_Btn);
-        Verification.textInElement(loginPage.InputUsernamePageTitleText,"כניסה" );
-        Verification.textInElement(loginPage.InputUsernamePageSubTitleText,"דוא\"ל או מספר טלפון נייד" );
-        Verification.textInElement(loginPage.InputUsernamePageContinueBtnText,"המשך" );
-        Verification.textInElement(loginPage.BelowContinueBtnText, "אם תמשיך, אתה מסכים בכך לתנאי השימוש ולהודעת הפרטיות של Amazon.");
-        Verification.textInElement(loginPage.NeedHelpBtnText,"זקוק לעזרה?");
-        Verification.textInElement(loginPage.NeWInAmazonBtnText,"הנך חדש ב Amazon?");
-        Verification.textInElement(loginPage.createAccountBtnText,"צור את חשבון Amazon שלך" );
 
 
 }
-}
+
 //        @Step ("Create a new user")
 //    @description ("Workflow to click on button and update text tnd click to create user")
 //    public static void createUser(String name, String email, String user, String Password) {
