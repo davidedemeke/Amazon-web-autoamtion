@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Amazon_Automation_PC" />
         <module name="TestAutomation" />
+        <module name="Amazon_Automation_Web" />
       </profile>
     </annotationProcessing>
   </component>
